@@ -32,10 +32,57 @@
             background-color: #f4f1ea;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b89050' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(244, 241, 234, 0.98) 0%, rgba(244, 241, 234, 0.8) 50%, rgba(244, 241, 234, 0.4) 100%);
-        }
-    </style>
+        .hero-overlay{
+    background:
+    linear-gradient(
+        90deg,
+        rgba(15,15,15,.82) 0%,
+        rgba(15,15,15,.62) 35%,
+        rgba(15,15,15,.30) 60%,
+        rgba(15,15,15,.10) 100%
+    );
+}
+    /* PREMIUM */
+
+body{
+    overflow-x:hidden;
+}
+
+.gold-glow{
+    position:absolute;
+    width:700px;
+    height:700px;
+    border-radius:999px;
+    background:rgba(184,144,80,.15);
+    filter:blur(120px);
+}
+
+.ultra-glass{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(18px);
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.2);
+}
+
+.float-animation{
+    animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0px);}
+}
+
+.premium-btn{
+    transition:.5s;
+}
+
+.premium-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+        </style>
 </head>
 <body class="font-body text-andes-dark bg-andes-cream antialiased selection:bg-andes-burgundy selection:text-andes-cream">
 
@@ -60,34 +107,112 @@
     </nav>
 
     <!-- Sección Principal (Hero) -->
-    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <!-- Imagen de fondo inspirada en los Andes -->
-            <img src="https://raw.githubusercontent.com/StefaniaCanellonis26/Canellonis-de-los-Andes/main/hero.png.png" alt="Paisaje de los Andes" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 hero-overlay"></div>
+   <!-- HERO PREMIUM -->
+
+<header class="relative min-h-screen overflow-hidden flex items-center pt-24">
+
+    <!-- Fondo -->
+
+    <div class="absolute inset-0">
+
+        <img
+        src="https://raw.githubusercontent.com/StefaniaCanellonis26/Canellonis-de-los-Andes/main/hero.png.png"
+        class="w-full h-full object-cover scale-110"
+        />
+
+        <div class="absolute inset-0 hero-overlay"></div>
+
+    </div>
+
+    <div class="gold-glow top-[-250px] left-[-150px]"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-20 items-center">
+
+        <!-- TEXTO -->
+
+        <div>
+
+            <div class="inline-flex ultra-glass rounded-full px-6 py-3 items-center gap-3 mb-10">
+
+                <span class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></span>
+
+                <span class="uppercase tracking-[0.25em] text-sm text-white font-semibold">
+                    Investigación funcional ESPOCH
+                </span>
+
+            </div>
+
+            <h1 class="text-6xl md:text-8xl font-serif font-bold leading-[1.05] text-white mb-10">
+
+                Nutrición
+                <span class="italic text-andes-gold">
+                    funcional
+                </span>
+
+                inspirada en los Andes.
+
+            </h1>
+
+            <p class="text-2xl text-gray-200 leading-relaxed max-w-2xl mb-12">
+
+                Canellonis enriquecidos con hierro hemo de alta biodisponibilidad.
+
+            </p>
+
+            <div class="flex flex-wrap gap-6">
+
+                <a href="#comprar"
+                class="premium-btn bg-andes-gold text-black font-bold px-10 py-5 rounded-full text-lg shadow-2xl">
+
+                    Comprar producto
+
+                </a>
+
+                <a href="#proyecto"
+                class="premium-btn ultra-glass border border-white/10 text-white px-10 py-5 rounded-full text-lg">
+
+                    Explorar investigación
+
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-3/5 text-center md:text-left">
+        <!-- PRODUCTO -->
+
+        <div class="relative flex justify-center">
+
+            <div class="ultra-glass rounded-[40px] p-8 float-animation border border-white/10">
+
+                <div class="flex justify-between items-center mb-8">
+
+                    <div class="bg-green-500/20 border border-green-400/20 text-green-300 px-5 py-2 rounded-full text-sm font-bold">
+
+                        Disponible
+
+                    </div>
+
+                    <div class="bg-andes-gold text-black px-5 py-2 rounded-full font-bold">
+
+                        $1.50
+
+                    </div>
+
                 </div>
-                <h1 class="text-4xl md:text-6xl font-serif font-bold text-andes-burgundy leading-tight mb-6">
-                    Prevenir la anemia con el sabor de nuestra tierra.
-                </h1>
-                <p class="text-lg md:text-2xl text-gray-700 mb-8 italic font-light">
-                    "Un producto pensado para la mujer, elaborado con el alma de los ingredientes andinos, fruto de la investigación académica."
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="#proyecto" class="bg-andes-burgundy text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-andes-dark transition-all transform hover:-translate-y-1">Descubrir Proyecto</a>
-                </div>
+
+                <img
+                src="image_77c61a.png"
+                class="w-[430px] mx-auto"
+                />
+
             </div>
-            <div class="md:w-2/5 flex justify-center">
-                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-white shadow-2xl p-4 border-4 border-andes-gold/30 transform hover:rotate-3 transition-all">
-                    <!-- LOGO DEL PROYECTO (Subir como image_77c61a.png) -->
-                    <img src="image_77c61a.png" alt="Logo Canellonis de los Andes" class="w-full h-full object-contain rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/400x400/f4f1ea/7a1c2e?text=Logo+Proyecto';">
-                </div>
-            </div>
+
         </div>
-    </header>
+
+    </div>
+
+</header>
 
     <!-- Descripción del Proyecto -->
     <section id="proyecto" class="py-24 bg-white">
@@ -345,7 +470,7 @@
 
             <div class="glass-card fade-up">
 
-                <img src="ofi kkk.pgn">
+                <img src="ofi kkk.png">
 
                 <div class="card-overlay"></div>
 
