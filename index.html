@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canellonis de los Andes - Innovación ESPOCH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        // Configuración de colores inspirados en el logo (Borgona y Crema)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'andes-burgundy': '#7a1c2e', 
+                        'andes-cream': '#f4f1ea',   
+                        'andes-gold': '#b89050',    
+                        'andes-dark': '#2c2c2c',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'body': ['"Lora"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Patrón decorativo suave para el fondo */
+        .bg-pattern {
+            background-color: #f4f1ea;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b89050' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(244, 241, 234, 0.98) 0%, rgba(244, 241, 234, 0.8) 50%, rgba(244, 241, 234, 0.4) 100%);
+        }
+    </style>
+</head>
+<body class="font-body text-andes-dark bg-andes-cream antialiased selection:bg-andes-burgundy selection:text-andes-cream">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4 bg-andes-cream/90 backdrop-blur-sm border-b border-andes-gold/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-xl md:text-2xl font-bold text-andes-burgundy tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-mountain-sun text-andes-gold"></i>
+                        CANELLONIS <span class="hidden sm:inline text-andes-gold">DE LOS ANDES</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#proyecto" class="hover:text-andes-burgundy transition-colors font-medium border-b-2 border-transparent hover:border-andes-gold">Investigación</a>
+                    <a href="#beneficios" class="hover:text-andes-burgundy transition-colors font-medium border-b-2 border-transparent hover:border-andes-gold">Beneficios</a>
+                    <a href="#equipo" class="bg-andes-burgundy text-andes-cream px-6 py-2 rounded-full hover:bg-andes-gold transition-all font-serif shadow-lg">El Equipo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Principal (Hero) -->
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Imagen de fondo inspirada en los Andes -->
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Paisaje de los Andes" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-3/5 text-center md:text-left">
+                <div class="inline-block bg-andes-burgundy text-andes-cream px-4 py-1 rounded text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+                    BROMATOLOGÍA II • ESPOCH
+                </div>
+                <h1 class="text-4xl md:text-6xl font-serif font-bold text-andes-burgundy leading-tight mb-6">
+                    Prevenir la anemia con el sabor de nuestra tierra.
+                </h1>
+                <p class="text-lg md:text-2xl text-gray-700 mb-8 italic font-light">
+                    "Un producto pensado para la mujer, elaborado con el alma de los ingredientes andinos, fruto de la investigación académica."
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#proyecto" class="bg-andes-burgundy text-white px-10 py-4 rounded-full font-bold shadow-xl hover:bg-andes-dark transition-all transform hover:-translate-y-1">Descubrir Proyecto</a>
+                </div>
+            </div>
+            <div class="md:w-2/5 flex justify-center">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-white shadow-2xl p-4 border-4 border-andes-gold/30 transform hover:rotate-3 transition-all">
+                    <!-- LOGO DEL PROYECTO (Subir como image_77c61a.png) -->
+                    <img src="image_77c61a.png" alt="Logo Canellonis de los Andes" class="w-full h-full object-contain rounded-full" onerror="this.onerror=null; this.src='https://placehold.co/400x400/f4f1ea/7a1c2e?text=Logo+Proyecto';">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Descripción del Proyecto -->
+    <section id="proyecto" class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-andes-gold font-bold tracking-widest text-sm uppercase">Nuestra Misión</span>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-andes-burgundy mt-2 italic">Ciencia aplicada al bienestar</h2>
+            </div>
+            <div class="prose prose-lg mx-auto text-gray-700 text-center italic">
+                <p class="text-xl md:text-2xl leading-relaxed">
+                    Nuestros cannellonis representan una **alternativa funcional innovadora**. Mediante el enriquecimiento con sangre de cordero y relleno de lengua de res, hemos logrado un bocado gourmet con alta biodisponibilidad de hierro hemo, diseñado específicamente para combatir la anemia ferropénica en la mujer.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Destacados -->
+    <section id="beneficios" class="py-20 bg-pattern relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white/80 backdrop-blur p-10 rounded-3xl shadow-lg border-b-8 border-andes-burgundy group hover:-translate-y-2 transition-all">
+                    <div class="w-16 h-16 bg-andes-burgundy text-andes-cream rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:bg-andes-gold transition-colors">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-serif text-andes-burgundy">Base Científica</h3>
+                    <p class="text-gray-600 leading-relaxed">Desarrollado bajo estrictos parámetros bromatológicos para asegurar un aporte nutricional real y efectivo.</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur p-10 rounded-3xl shadow-lg border-b-8 border-andes-gold group hover:-translate-y-2 transition-all">
+                    <div class="w-16 h-16 bg-andes-gold text-andes-cream rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:bg-andes-burgundy transition-colors">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-serif text-andes-burgundy">Salud de Hierro</h3>
+                    <p class="text-gray-600 leading-relaxed">Optimizado para la prevención de la anemia en mujeres en edad reproductiva, donde la demanda de hierro es mayor.</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur p-10 rounded-3xl shadow-lg border-b-8 border-andes-burgundy group hover:-translate-y-2 transition-all">
+                    <div class="w-16 h-16 bg-andes-burgundy text-andes-cream rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-inner group-hover:bg-andes-gold transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 font-serif text-andes-burgundy">Hierbas Andinas</h3>
+                    <p class="text-gray-600 leading-relaxed">Incorporamos la riqueza botánica de nuestra región para mejorar el perfil sensorial y la digestión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información del Equipo (ESPOCH) -->
+    <section id="equipo" class="py-24 bg-andes-burgundy text-andes-cream">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <div class="inline-block border-2 border-andes-gold text-andes-gold px-4 py-1 rounded-full text-xs font-bold mb-6">FACULTAD DE CIENCIAS</div>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold mb-8 italic">Equipo Investigador</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-full border border-andes-gold/30 flex items-center justify-center group-hover:bg-andes-gold transition-all">
+                                <span class="font-bold text-andes-gold group-hover:text-andes-burgundy">LG</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">Lidia Abigail Gualan</h4>
+                                <p class="text-andes-gold text-sm">Código: 3764</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-full border border-andes-gold/30 flex items-center justify-center group-hover:bg-andes-gold transition-all">
+                                <span class="font-bold text-andes-gold group-hover:text-andes-burgundy">EG</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">Estefanía Mónica Guayanlema</h4>
+                                <p class="text-andes-gold text-sm">Código: 4332</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-full border border-andes-gold/30 flex items-center justify-center group-hover:bg-andes-gold transition-all">
+                                <span class="font-bold text-andes-gold group-hover:text-andes-burgundy">AG</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">Alejandra Abigail Guzmán</h4>
+                                <p class="text-andes-gold text-sm">Código: 4554</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-2xl">
+                    <div class="mb-8 border-b border-andes-gold/20 pb-4">
+                        <h4 class="font-bold text-andes-gold uppercase tracking-tighter text-sm mb-2">Tema de Tesis / Proyecto</h4>
+                        <p class="text-lg font-serif italic uppercase leading-tight">
+                            Elaboración de Cannellonis enriquecidos con sangre de cordero rellenos con lengua de res y hierbas andinas como alternativa funcional.
+                        </p>
+                    </div>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase">Materia</p>
+                            <p class="font-bold">Bromatología II</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-400 uppercase">Institución</p>
+                            <p class="font-bold">ESPOCH</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-andes-dark py-12 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="mb-4">© 2026 Canellonis de los Andes. Proyecto académico desarrollado en Riobamba, Ecuador.</p>
+            <div class="flex justify-center gap-6">
+                <i class="fa-solid fa-mountain text-andes-gold/30 text-xl"></i>
+                <i class="fa-solid fa-flask-vial text-andes-gold/30 text-xl"></i>
+                <i class="fa-solid fa-dna text-andes-gold/30 text-xl"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto visual al hacer scroll en el Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.remove('bg-andes-cream/90', 'py-4');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.add('bg-andes-cream/90', 'py-4');
+            }
+        });
+    </script>
+</body>
+</html>
